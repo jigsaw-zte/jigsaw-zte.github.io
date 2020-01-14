@@ -1,1 +1,45 @@
-hello jigsaw
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jigsaw</title>
+    <base href="\">    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 15px;
+        }
+
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        (function(){
+            // 兼容ie11
+            if (window.NodeList && !NodeList.prototype.forEach) {
+                NodeList.prototype.forEach = function (callback, thisArg) {
+                    thisArg = thisArg || window;
+                    for (var i = 0; i < this.length; i++) {
+                        callback.call(thisArg, this[i], i, this);
+                    }
+                };
+            }
+        })()
+    </script>
+<link rel="stylesheet" href="styles.6ac307578a25fc3e9e59.css"></head>
+<body>
+<app-root>
+    <p class="loading">Jigsaw的示例正在打开，请稍候...</p>
+</app-root>
+<script src="runtime.726558caab60d2fb9dc5.js"></script><script src="polyfills-es5.697cdcfcd55a8a4353f5.js" nomodule></script><script src="polyfills.c58ca84eac8e34315ec9.js"></script><script src="scripts.f411af081992af4f3b15.js"></script><script src="main.978f62945890bb4ae941.js"></script></body>
+</html>
